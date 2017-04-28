@@ -1,7 +1,7 @@
 /*jshint esversion: 6*/
-var express = require('express');
-var router = express.Router();
-var Movie = require("../models/movie.js");
+const express = require('express');
+const router = express.Router();
+const Movie = require("../models/movie.js");
 
 router.get('/movies', function(req, res, next) {
   Movie.find({}, (err, movies)=> {

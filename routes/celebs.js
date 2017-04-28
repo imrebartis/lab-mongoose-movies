@@ -1,7 +1,7 @@
 /*jshint esversion: 6*/
-var express = require('express');
-var router = express.Router();
-var Celeb = require("../models/celeb.js");
+const express = require('express');
+const router = express.Router();
+const Celeb = require("../models/celeb.js");
 
 router.get('/celebs', function(req, res, next) {
   Celeb.find({}, (err, celebs)=> {
