@@ -1,0 +1,11 @@
+<h1> List of Celebrities </h1>
+
+<ul>
+<% celebs.forEach(celeb=>{ %>
+  <li><p><%=celeb.name%></p> <p> Occupation: <%=celeb.occupation%> </p> <p>Catch phrase: <%=celeb.catchPhrase%> </p>
+  <p><a href="/celebs/<%= celeb._id%>">View details</a></p>
+  <p><a href="/celebs/<%= celeb._id %>/delete"> Delete </a></p>
+  </li>
+<% }) %>
+</ul>
+<a href="/celebs/new">Add new celebrity</a>
